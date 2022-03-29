@@ -1,6 +1,6 @@
 from cmd import PROMPT
 import numpy as np
-import datetime as dt
+from datetime import date
 
 class Brunton:
     def __init__(self):
@@ -47,5 +47,18 @@ class Brunton:
 
     def setname(self, string):
         self.name = string
+
+    def checkout(self, string):
+        self.checkoutDate = date.today()
+        self.name = string
+    
+    def checkin(self):
+        self.checkinDate = date.today()
+    
+    def setcheckoutdate(self, string):
+        self.checkoutDate = date.fromisoformat(string)
+
+    def setcheckindate(self, string):
+        self.checkinDate = date.fromisoformat(string)
 
 
