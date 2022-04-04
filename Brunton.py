@@ -1,6 +1,7 @@
-from cmd import PROMPT
 import numpy as np
 from datetime import date
+import tkinter as tk
+
 
 class Brunton:
     def __init__(self):
@@ -12,8 +13,8 @@ class Brunton:
         self.needsRepair = False
         self.missing = False
         self.name = ""
-        self.checkoutDate = dt.date
-        self.checkinDate = dt.date
+        self.checkoutDate = date
+        self.checkinDate = date
 
     def setnumber(self, num):
         self.number = num
